@@ -1,0 +1,15 @@
+.feedback_list {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  font-size: 2rem;
+  padding: 0.5rem;
+}
+.feedback_btn {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  background-color: #03a9f4;
+  text-align: center;
+  text-decoration: none;
+}
