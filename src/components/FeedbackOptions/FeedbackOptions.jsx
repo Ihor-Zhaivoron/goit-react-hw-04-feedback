@@ -1,8 +1,8 @@
 import css from './FeedbackOptions.module.css';
 import PropTypes from 'prop-types';
 
-const FeedbackOptions = ({ states, onClickBtn }) => {
-  const keys = Object.keys(states);
+export function FeedbackOptions({ options, onClickBtn }) {
+  const keys = Object.keys(options);
   return (
     <ul className={css.feedback_list}>
       {keys.map(key => (
@@ -18,10 +18,8 @@ const FeedbackOptions = ({ states, onClickBtn }) => {
       ))}
     </ul>
   );
-};
+}
 FeedbackOptions.propTypes = {
   states: PropTypes.object,
   onClickBtn: PropTypes.func.isRequired,
 };
-
-export default FeedbackOptions;

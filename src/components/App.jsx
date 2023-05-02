@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Notification } from './Notification/Notification';
-import Section from './Section/Section';
-import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
-import Statistics from './Statistics/Statistics';
+import { Section } from './Section/Section';
+import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
+import { Statistics } from './Statistics/Statistics';
 
 export const App = () => {
   const [good, setGood] = useState(0);
@@ -47,7 +47,7 @@ export const App = () => {
         <FeedbackOptions options={feedbackOption} onClickBtn={changeValue} />
       </Section>
       <Section title="Statistics">
-        {countTotalFeedback > 0 ? (
+        {countTotalFeedback() > 0 ? (
           <Statistics
             good={good}
             neutral={neutral}
